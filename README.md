@@ -119,13 +119,5 @@ Hyperparameter tuning
 Better handling of rare classes
 Model ensembling
 Real-time deployment
-
-If you want next:
-✅ I can convert this into GitHub-ready README with badges + images
-✅ Or make short version for submission/report
-
-in git hub formate 
-
-Here’s a GitHub-ready README.md (clean + professional + attractive) with badges, sections, and formatting 👇
-
+
 
