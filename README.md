@@ -1,123 +1,132 @@
-🚀 Desert Image Segmentation using SegFormer-B2
-📌 Overview
+# 🌵 Offroad semantic Segmentation system 
+🚀 Transformer-Based Semantic Segmentation using SegFormer-B2  
 
-This project focuses on semantic segmentation of desert images using a deep learning approach. The goal is to classify each pixel of an image into one of the predefined classes such as sky, landscape, rocks, vegetation, etc.
+Accurate pixel-level understanding of desert environments using deep learning  
 
-We use a SegFormer-B2 model combined with advanced training strategies to achieve high accuracy and robust performance under domain shift conditions.
+---
 
-🎯 Objective
-Perform pixel-wise classification of desert images
-Handle class imbalance effectively
-Achieve high IoU (Intersection over Union) score
-Build a scalable and efficient segmentation pipeline
-🧠 Model Architecture
-Encoder: SegFormer-B2 (Transformer-based)
-Decoder: Lightweight segmentation head
-Key Features:
-Multi-head self-attention
-Hierarchical feature extraction
-Efficient computation for limited GPU
-🔄 Pipeline Workflow
-1️⃣ Input Preprocessing
-Resize images to 512 × 512
-Normalize pixel values
-Ensure consistent input format
-2️⃣ Data Augmentation
-Horizontal Flip
-Random Crop & Resize
-Color Jitter (optimized for desert tones)
+## 💡 About the Project  
 
-➡️ Helps improve generalization and prevent overfitting
+This project focuses on semantic segmentation of desert images, where each pixel is classified into predefined categories such as sky, landscape, vegetation, rocks, and logs.  
 
-3️⃣ Model Training
-Model: SegFormer-B2
-Loss Function: Weighted Cross-Entropy
-Optimizer: AdamW
-Learning Rate Scheduler: Cosine Annealing
+We implemented a SegFormer-B2 transformer-based model, combined with advanced training strategies like transfer learning, weighted loss, and augmentation, to achieve robust performance under domain shift conditions.  
 
-➡️ Handles class imbalance and improves convergence
+---
 
-4️⃣ Evaluation
-Metric: IoU (Intersection over Union)
-Per-class IoU analysis
-Confusion matrix visualization
-5️⃣ Output
-Segmentation masks (class-wise)
-Colored visualization outputs
-Performance metrics
+## ✨ Features  
+🧠 Transformer-based SegFormer-B2 architecture  
+⚡ Efficient training with limited GPU  
+🎯 High IoU performance (~0.53+)  
+📊 Per-class evaluation & confusion matrix  
+🔄 Data augmentation for better generalization  
+🧩 Pixel-level segmentation output  
 
+---
 
-📊 Key Features
-✅ Transfer Learning (Pretrained Weights)
-✅ Class Imbalance Handling
-✅ Efficient GPU Utilization
-✅ Early Stopping
-✅ Mixed Precision Training
-⚙️ Tech Stack
-Python
-PyTorch
-HuggingFace Transformers
-OpenCV
-NumPy / Matplotlib
-💻 Hardware Used
-NVIDIA RTX 4070 / Tesla T4 (Colab)
-8GB+ VRAM recommended
-## 📁 Project Structure
+## ⚙️ Tech Stack  
+- Deep Learning: PyTorch, Transformers  
+- Languages: Python  
+- Libraries: OpenCV, NumPy, Matplotlib  
+- Tools: VS Code, Google Colab  
 
-```
+---
+
+## 🏗️ Project Structure  
+
 desert-segmentation/
-├── train.py
-├── val.py
-├── dataset/
-│   ├── train/
-│   ├── val/
-│   └── test/
-├── outputs/
-│   ├── predictions/
-│   ├── graphs/
-│   └── logs/
-├── models/
-│   ├── segformer_best.pth
-│   └── segformer_last.pth
-└── README.md
-```
-▶️ How to Run
-1. Install Dependencies
-pip install torch torchvision transformers opencv-python matplotlib tqdm
-2. Train Model
-python train.py
-3. Evaluate Model
-python val.py
-📈 Results
-High performance on Sky & Landscape classes
-Improved accuracy using weighted loss
-Competitive IoU score (~0.53+ and improving)
-⚠️ Challenges Faced
-Class imbalance (rare objects like logs, clutter)
-Domain shift between train and test data
-GPU memory limitations
-✅ Solutions Implemented
-Weighted loss function
-Data augmentation
-Efficient model architecture
-👥 Team
+├── assets/ # Images for README (architecture, results, etc.)
+├── train.py # Training script
+├── val.py # Validation / evaluation script
+├── dataset/ # Dataset folder
+│ ├── train/
+│ ├── val/
+│ └── test/
+├── outputs/ # Model outputs
+│ ├── predictions/
+│ ├── graphs/
+│ └── logs/
+├── models/ # Saved model weights
+│ ├── segformer_best.pth
+│ └── segformer_last.pth
+└── README.md # Project documentation
 
-Team Name: Paradox
+---
+## 🧠 Model Architecture  
 
-👨‍💻 Prajwal Barsagade (Leader)
-👨‍💻 Yash Bora
-👨‍💻 Aditya Sarse
+<p align="center">
+  <img src="assets/architecture.png" width="700"/>
+</p>
 
+---
 
+## 📊 Results  
 
-##🏁 Conclusion
+### 🔹 Segmentation Comparison  
+_Input vs Ground Truth vs Prediction_
 
-This project demonstrates an effective deep learning pipeline for real-world semantic segmentation tasks, especially in challenging environments like desert terrains.
+<p align="center">
+  <img src="assets/result1.png" width="30%"/>
+  <img src="assets/result2.png" width="30%"/>
+   <img src="assets/result3.png" width="30%"/>
+</p>
 
-⭐ Future Improvements
-Hyperparameter tuning
-Better handling of rare classes
-Model ensembling
-Real-time deployment
-
+---
+## 🖼️ Output  
 
+<p align="center">
+  <img src="assets/out1.png" width="45%"/>
+  <img src="assets/out2.png" width="45%"/>
+</p>
+---
+### 🔹 Generated Segmentation Masks  
+
+The model generates pixel-wise classified masks, where each color represents a different class such as sky, vegetation, rocks, etc.  
+
+🎨 Colored segmentation masks  
+📌 Class-wise predictions  
+🧩 Clear boundary detection  
+
+---
+
+## 📈 Performance  
+✅ Strong performance on Sky & Landscape  
+📉 Lower performance on rare classes  
+📊 Mean IoU: ~0.53+ (improving)  
+
+---
+
+## ⚠️ Challenges  
+- Class imbalance  
+- Domain shift  
+- Limited GPU memory  
+
+---
+
+## ✅ Solutions  
+- Weighted Cross-Entropy Loss  
+- Data Augmentation  
+- Transfer Learning  
+- Efficient Transformer Architecture  
+
+---
+
+## 👥 Team  
+
+**Team Name:** Paradox  
+
+👨‍💻 Prajwal Barsagade (Leader)  
+👨‍💻 Yash Bora  
+👨‍💻 Aditya Sarse  
+
+---
+
+## 🚀 Future Improvements  
+- Improve rare class detection  
+- Hyperparameter tuning  
+- Model ensembling  
+- Real-time deployment  
+
+---
+
+## ⭐ Contributing  
+Contributions are welcome! Feel free to fork and improve 🚀  
