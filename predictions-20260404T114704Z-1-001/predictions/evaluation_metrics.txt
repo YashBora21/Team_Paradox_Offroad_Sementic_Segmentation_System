@@ -1,0 +1,23 @@
+============================================================
+  DUALITY AI HACKATHON — EVALUATION RESULTS
+  Model: SegFormer-B2  (nvidia/mit-b2)
+============================================================
+
+  Images evaluated : 536
+  Mean IoU         : 0.2516
+
+------------------------------------------------------------
+  Per-Class IoU
+------------------------------------------------------------
+  Background            0.0000    ← needs improvement
+  Trees                 0.1412  ██  ← needs improvement
+  Lush Bushes           0.0014    ← needs improvement
+  Dry Grass             0.4694  █████████
+  Dry Bushes            0.3292  ██████
+  Ground Clutter        0.0000    ← needs improvement
+  Logs                  0.0000    ← needs improvement
+  Rocks                 0.0603  █  ← needs improvement
+  Landscape             0.5346  ██████████
+  Sky                   0.9794  ███████████████████
+
+============================================================
