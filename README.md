@@ -1,4 +1,4 @@
-# 🌵 Offroad Semantic Segmentation System  
+# 🌵 Offroad Semantic Segmentation System 
 🚀 Transformer-Based Semantic Segmentation using SegFormer-B2  
 
 Accurate pixel-level understanding of desert environments using deep learning  
